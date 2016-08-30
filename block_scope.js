@@ -3,7 +3,7 @@ function addToQueue (...people) {
   var positions = [];
 
   for(var i=0; i<people.length; i++) {
-    let j = i; // store the i value in block scope
+    let j = i; // store the i value in block scope, or make the i a block variable (let)
     positions[i] = function() {
       return j+1;
     } // j will be destroyed at the end of the block scope, hence the value won't increment like i
